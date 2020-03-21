@@ -10,18 +10,4 @@ export class AppController {
         return this.appService.getHello();
     }
 
-
-    @Get('user/:id')
-    getUser(@Response() res, @Param('id') id): string {
-        return res.json({
-            status: {
-                code: 0,
-                desc: null
-            },
-            result: {
-                user_id: id
-            }
-        });
-    }
-
 }
